@@ -61,5 +61,39 @@ namespace COMP123_Lesson9
             Debug.WriteLine("Password: " + PasswordTextBox.Text);
             this._clearForm();
         }
+
+        private void UsernameTextBox_Leave(object sender, EventArgs e)
+        {
+            if(UsernameTextBox.Text.Length < 6)
+            {
+                UsernameTextBox.Focus();
+                UsernameTextBox.SelectAll();
+                MessageLabel.Text = "Username too short!";
+                MessageLabel.ForeColor = Color.Red;
+            }
+            else
+            {
+                MessageLabel.Text = "Please Login";
+                MessageLabel.ForeColor = Color.Black;
+            }
+        }
+
+        private void PasswordTextBox_Leave(object sender, EventArgs e)
+        {
+            if (PasswordTextBox.Text.Length < 6)
+            {
+                PasswordTextBox.Focus();
+                PasswordTextBox.SelectAll();
+                MessageLabel.Text = "Password too short!";
+                MessageLabel.ForeColor = Color.Red;
+            }
+            else
+            {
+                MessageLabel.Text = "Please Login";
+                MessageLabel.ForeColor = Color.Black;
+                LoginButton.Enabled = true;
+            }
+            
+        }
     }
 }
