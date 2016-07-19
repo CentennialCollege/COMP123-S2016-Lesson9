@@ -266,6 +266,7 @@
             this.BackButton.TabIndex = 2;
             this.BackButton.Text = "<-";
             this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // ClearButton
             // 
@@ -308,6 +309,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.Calculator_Load);
             this.TableLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
